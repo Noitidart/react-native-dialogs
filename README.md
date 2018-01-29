@@ -45,6 +45,17 @@ repositories {
 ```
 The changes should look like [this](https://github.com/aakashns/react-native-dialogs-example/commit/b58086d8fb9ece99f0e678dd8bf0e689a856bd43).
 
+Also in this same file, `android/app/build.gradle`, to the `dependencies` add in `compile project(':react-native-dialogs')` like this:
+
+```
+dependencies {
+    // ..... there is a bunch of other stuff here
+    compile project(':react-native-dialogs')
+}
+```
+
+It should look like [this](https://github.com/aakashns/react-native-dialogs-example/commit/b58086d8fb9ece99f0e678dd8bf0e689a856bd43#diff-dc46f9f5dfe204e394fb41395ccd03cfR33).
+
 You also need to update your ```settings.gradle``` and add:
 ```
 include ':react-native-dialogs'
