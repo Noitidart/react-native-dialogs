@@ -345,9 +345,13 @@ class DialogAndroid {
                     }
                     case 'itemsCallback':
                     case 'itemsCallbackSingleChoice': {
-                        const [ selectedIndex ] = rest;
+                        const [ selectedIndex, selectedLabel, isPromptCheckBoxChecked ] = rest;
                         const selectedItem = items[selectedIndex];
-                        return resolve({ action:DialogAndroid.actionSelect, selectedItem });
+                        return resolve({
+                          action: DialogAndroid.actionSelect,
+                          selectedItem,
+                          isPromptCheckBoxChecked
+                        });
                     }
                     case 'onAny': {
                         const [ dialogAction ] = rest;
